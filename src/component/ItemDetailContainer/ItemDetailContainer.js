@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Image, Button } from "react-bootstrap";
 
@@ -51,6 +51,13 @@ const ItemDetailContainer = () => {
               </div>
               <div className="col-12 col-md-6 pb-2">
                 <Button>Modificar</Button>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-12 pb-4">
+                <Button as={Link} to="/licencias">
+                  Volver
+                </Button>
               </div>
             </div>
           </div>
