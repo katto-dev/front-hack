@@ -15,7 +15,7 @@ export const ItemListContainer = ({ greeting }) => {
 
   const getData = () => {
     fetch(
-      'providers.json',
+      "providers.json",
 
       {
         headers: {
@@ -42,7 +42,6 @@ export const ItemListContainer = ({ greeting }) => {
     getData();
   }, []);
 
-
   return (
     <>
       <div className="ItemListContainer">
@@ -64,7 +63,6 @@ export const ItemListContainer = ({ greeting }) => {
       )}
     </>
   );
-
 
   // return (
   //   <div className="App">
