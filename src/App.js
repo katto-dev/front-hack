@@ -7,6 +7,7 @@ import Error404 from "./component/pages/Error404";
 import { AdProvider } from "./context/TechContext";
 import Pdp from "./component/Pdp/Pdp";
 import Byc from "./component/Byc/Byc";
+import { ItemListContainer } from "./component/ItemListContainer/ItemListContainer";
 function App() {
   return (
     <AdProvider>
@@ -16,6 +17,7 @@ function App() {
           <Route path="/byc" element={<Byc />} />
           <Route path="/pdp" element={<Pdp />} />
           <Route path="/tyc" element={<Tyc />} />
+          <Route path="/items" element={<ItemListContainer />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer />
