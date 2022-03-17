@@ -4,7 +4,7 @@ import "./Item.css";
 
 export const Item = ({ id, title, img }) => {
   return (
-    <Card className="cardContainer">
+    <Card className="cardContainer bg-dark">
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
