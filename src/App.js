@@ -21,6 +21,7 @@ function App() {
           <Route path="/pdp" element={<Pdp />} />
           <Route path="/tyc" element={<Tyc />} />
           <Route path="/licencias/:id" element={<ItemDetailContainer greeting={"Bienvenido a Licencias"} />} />
+          <Route path="/category/:categoryID" element={<ItemListContainer greeting={"Bienvenido a Licencias"} />} />
           <Route path="/licencias" element={<ItemListContainer greeting={"Bienvenido a Licencias"} />} />
           <Route path="*" element={<Error404 />} />
         </Routes>

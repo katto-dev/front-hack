@@ -9,14 +9,23 @@ export const ItemListContainer = ({ greeting }) => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  // const { categoryID } = useParams();
+  const { categoryID } = useParams();
 
   const fetchMyAPI = async () => {
     try {
       setIsLoading(true);
       const response = await fetch("../providers.json");
       const licencias = await response.json();
-      setData(licencias);
+      if (categoryID) {
+        console.log("Licencias: ", licencias);
+        console.log(categoryID);
+        const filteredCategory = await licencias.filter(
+          (x) => x.category === categoryID
+        );
+        setData(filteredCategory);
+      } else {
+        setData(licencias);
+      }
     } catch (error) {
       setError(error);
     } finally {
@@ -26,8 +35,8 @@ export const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
     fetchMyAPI();
-  }, []);
-
+  }, [categoryID]);
+  
   return (
     <>
       <div className="ItemListContainer">
