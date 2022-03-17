@@ -13,8 +13,13 @@ export const ItemListContainer = ({ greeting }) => {
 
   const { categoryID } = useParams();
 
+<<<<<<< HEAD
   const getData = async () => {
     await fetch(
+=======
+  const getData = () => {
+    fetch(
+>>>>>>> c62fc90b707e3261c9b276d16104b7069bf0706b
       "providers.json",
 
       {
