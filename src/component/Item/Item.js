@@ -8,7 +8,7 @@ export const Item = ({ id, title, img }) => {
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <Link to={`/item/${id}`}>
+        <Link to={`/licencias/${id}`}>
           <Button variant="primary">Ver mas detalles</Button>
         </Link>
       </Card.Body>

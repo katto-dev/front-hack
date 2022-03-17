@@ -13,8 +13,8 @@ export const ItemListContainer = ({ greeting }) => {
 
   const { categoryID } = useParams();
 
-  const getData = () => {
-    fetch(
+  const getData = async () => {
+    await fetch(
       "providers.json",
 
       {
@@ -26,14 +26,10 @@ export const ItemListContainer = ({ greeting }) => {
       }
     )
       .then(function (response) {
-        // console.log(response);
-
         return response.json();
       })
 
       .then(function (myJson) {
-        // console.log(myJson);
-
         setData(myJson);
       });
   };
