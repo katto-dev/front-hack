@@ -10,24 +10,12 @@ const ItemDetailContainer = () => {
     let response = await fetch("../providers.json");
     let licencias = await response.json();
     let licenciaFilter = await licencias.filter((x) => x.id === id);
-<<<<<<< HEAD
     setData(licenciaFilter);
   };
 
   useEffect(() => {
     fetchMyAPI();
   }, [id]);
-=======
-    
-    setData(licenciaFilter);
-    
-  }, []);
-
-  useEffect(() => {
-    fetchMyAPI();
-  }, []);
-  console.log(data)
->>>>>>> 59382049488d320e06795fcdc403818a77cad8ce
 
   return (
     <div>
