@@ -9,14 +9,15 @@ const ItemDetailContainer = () => {
     let response = await fetch("../providers.json");
     let licencias = await response.json();
     let licenciaFilter = await licencias.filter((x) => x.id === id);
-    console.log(licenciaFilter);
+    
     setData(licenciaFilter);
-    console.log(data);
+    
   }, []);
 
   useEffect(() => {
     fetchMyAPI();
   }, []);
+  console.log(data)
 
   return <div></div>;
 };
