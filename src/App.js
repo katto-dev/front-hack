@@ -7,11 +7,12 @@ import Error404 from "./component/pages/Error404";
 import { AdProvider } from "./context/TechContext";
 import Pdp from "./component/Pdp/Pdp";
 import Byc from "./component/Byc/Byc";
+import NavBar from "./component/NavBar/NavBar";
 function App() {
   return (
     <AdProvider>
       <Router>
-        {/* <NavBar/> */}
+        <NavBar />
         <Routes>
           <Route path="/byc" element={<Byc />} />
           <Route path="/pdp" element={<Pdp />} />
