@@ -116,7 +116,6 @@ const Footer = () => {
           <Image
             src="https://img.freepik.com/vector-gratis/fondo-cohete-estilo-flat_23-2147904992.jpg?w=740&t=st=1647493015~exp=1647493615~hmac=df56a2fed7052aea4edd40f954372aa63e6240a8eb51a50f890f85ba6cc651c0"
             roundedCircle
-            responsive
             width={100}
           />
         </div>
