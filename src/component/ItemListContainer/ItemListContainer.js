@@ -13,9 +13,9 @@ export const ItemListContainer = ({ greeting }) => {
 
   const { categoryID } = useParams();
 
-  const getData = () => {
-    fetch(
-      'providers.json',
+  const getData = async () => {
+    await fetch(
+      "providers.json",
 
       {
         headers: {
@@ -26,14 +26,10 @@ export const ItemListContainer = ({ greeting }) => {
       }
     )
       .then(function (response) {
-        // console.log(response);
-
         return response.json();
       })
 
       .then(function (myJson) {
-        // console.log(myJson);
-
         setData(myJson);
       });
   };
@@ -41,7 +37,6 @@ export const ItemListContainer = ({ greeting }) => {
   useEffect(() => {
     getData();
   }, []);
-
 
   return (
     <>
@@ -64,7 +59,6 @@ export const ItemListContainer = ({ greeting }) => {
       )}
     </>
   );
-
 
   // return (
   //   <div className="App">
