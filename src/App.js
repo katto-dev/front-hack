@@ -8,12 +8,14 @@ import { AdProvider } from "./context/TechContext";
 import Pdp from "./component/Pdp/Pdp";
 import Byc from "./component/Byc/Byc";
 import NavBar from "./component/NavBar/NavBar";
+import ItemDetail from "./component/ItemDetail/ItemDetail";
 function App() {
   return (
     <AdProvider>
       <Router>
         <NavBar />
         <Routes>
+          <Route path="/itemdetail" element={<ItemDetail />} />
           <Route path="/byc" element={<Byc />} />
           <Route path="/pdp" element={<Pdp />} />
           <Route path="/tyc" element={<Tyc />} />
