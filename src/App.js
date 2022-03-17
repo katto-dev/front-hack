@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+// import logoHackaton from "./assets/img/hackaton_8.png";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./component/Footer/Footer";
+import Tyc from "./component/T&C/Tyc";
+import Error404 from "./component/pages/Error404";
+import { AdProvider } from "./context/TechContext";
+import Pdp from "./component/Pdp/Pdp";
+import Byc from "./component/Byc/Byc";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AdProvider>
+      <Router>
+        {/* <NavBar/> */}
+        <Routes>
+          <Route path="/byc" element={<Byc />} />
+          <Route path="/pdp" element={<Pdp />} />
+          <Route path="/tyc" element={<Tyc />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </AdProvider>
   );
 }
 
