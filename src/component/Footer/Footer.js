@@ -44,27 +44,21 @@ const Footer = () => {
           <p>LEGALES</p>
           <Link to={"/pdp"}>Políticas de Privacidad</Link>
           <Link to={"/tyc"}>Terminos y condiciones de uso</Link>
-          <Link
-            to={"//www.argentina.gob.ar/produccion/defensadelconsumidor"}
-            target={"_blank"}
-          >
-            Defensa de las y los consumidores
-          </Link>
-          <Link to={"/byc"}>Sorteo - Base y condiciones</Link>
+          
         </div>
         <div className="col-12 col-md-3 d-flex flex-column">
           <p>MAPA DEL SITIO</p>
           <Link to={"/"}>Inicio</Link>
-          <Link to={"/beneficios"}>Beneficios</Link>
-          <Link to={"/cuenta"}>Cuenta</Link>
-          <Link to={"/tarjeta"}>Tarjeta</Link>
-          <Link to={"/ayuda"}>Ayuda</Link>
+          <Link to={"/licencias"}>Licencias</Link>
+          <Link to={"/solicitudes"}>Solicitudes</Link>
+          <Link to={"/estadisticas"}>Estadisticas</Link>
+          <Link to={"/equipo"}>Equipo</Link>
         </div>
         <div className="col-12 col-md-3 d-flex flex-column">
           <p>CONTACTANOS</p>
           <Link
             to={
-              "//api.whatsapp.com/send/?phone=5491165979041&text&app_absent=0"
+              "//api.whatsapp.com/send/?phone=5491122223333&text&app_absent=0"
             }
             target={"_blank"}
           >
@@ -81,8 +75,7 @@ const Footer = () => {
           >
             Trabajá con nosotros
           </Link>
-          <p>
-            Seguinos en{" "}
+          <p>Seguinos en{" "}</p>
             <Link
               to={
                 "//linkedin.com/authwall?trk=bf&trkInfo=AQFlirYoVQNCJQAAAX-V46sAazDWpM5vfo_ZYsSPOVSAhWbEhdUexdjSJ2eoJwq4RtnZoHXcrPbjUwAvIIY9Ygto8lmM4sFxY-5O0wf9Vgl3ce391kRM2hHrBkAbB94lPAKrnH0=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fpersonal-pay%2Fabout%2F"
@@ -97,18 +90,13 @@ const Footer = () => {
             <Link to={"//instagram.com/personalpay/"} target={"_blank"}>
               <FontAwesomeIcon icon={faInstagram} size="lg" />
             </Link>
-          </p>
+          
         </div>
       </div>
       <div className="row bg-secondary text-light py-3 px-1">
         <div className="col-12 col-sm-8 col-md-10">
           <p>
-            Micro Sistemas ofrece servicios de pago y no está autorizada por el
-            Banco Central a operar como entidad financiera. Los fondos
-            acreditados en cuentas de pago no constituyen depósitos en una
-            entidad financiera, ni están garantizados conforme legislación
-            aplicable a depósitos en entidades financieras. Micro Sistemas
-            S.A.U. - Todos los derechos reservados - General Hornos 690 CABA,
+            Equipo 8 - Hackaton TechAcademy. - Todos los derechos reservados - General Hornos 690 CABA,
             Argentina - CUIT N° 30-57297583-1
           </p>
         </div>
