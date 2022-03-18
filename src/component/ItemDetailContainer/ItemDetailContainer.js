@@ -84,11 +84,6 @@ const ItemDetailContainer = () => {
                   </Button>
                 </div>
                 <div className="col-12 col-md-6 pb-2">
-                  <Button className="bton bton-primary">Modificar</Button>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-12 pb-4">
                   <Button
                     className="bton bton-primary"
                     as={Link}
