@@ -20,7 +20,6 @@ const NavBar = () => {
           <Navbar.Brand as={Link} to="/">
             <img
               src="../hackaton-8.png"
-              
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
@@ -39,6 +38,9 @@ const NavBar = () => {
               </Nav.Link>
               <Nav.Link as={Link} to="/estadisticas">
                 Estadisticas
+              </Nav.Link>
+              <Nav.Link as={Link} to="/abm">
+                ABM
               </Nav.Link>
               <Nav.Link as={Link} to="/solicitudes">
                 <FontAwesomeIcon
