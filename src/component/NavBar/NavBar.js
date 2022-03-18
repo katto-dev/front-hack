@@ -1,10 +1,11 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBell } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
-
-  const user = JSON.parse(localStorage.getItem('user'));
+  const user = JSON.parse(localStorage.getItem("user"));
 
   const handleLogout = () => {
     localStorage.removeItem("accessToken");
@@ -39,13 +40,18 @@ const NavBar = () => {
               <Nav.Link as={Link} to="/estadisticas">
                 Estadisticas
               </Nav.Link>
+              <Nav.Link as={Link} to="/solicitudes">
+                <FontAwesomeIcon
+                  icon={faBell}
+                  size={"lg"}
+                  pull="right"
+                  color="White"
+                />
+              </Nav.Link>
             </Nav>
             <Navbar.Text>
-              <button 
-                  className='btn btn-outline-info'
-                  onClick={handleLogout}
-              >
-                  Logout
+              <button className="btn btn-outline-info" onClick={handleLogout}>
+                Logout
               </button>
             </Navbar.Text>
           </Navbar.Collapse>
