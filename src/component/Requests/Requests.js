@@ -36,7 +36,6 @@ export const Requests = () => {
   useEffect(() => {
     fetchMyAPI();
   }, []);
-console.log(data)
   return (
     <div className="container">
       <div className="solicitudes">

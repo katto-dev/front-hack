@@ -12,6 +12,7 @@ const Formulario = () => {
   const handleChange = (event) => {
     setMail(event.target.value)
   }
+  // console.log(licencia[0]._id)
 
   const handleLic = async () => {
     try {
@@ -21,7 +22,7 @@ const Formulario = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          vendorId: licencia.id,
+          vendorId: licencia[0]._id,
           mail: mail,
         }),
       };
@@ -47,7 +48,7 @@ const Formulario = () => {
   return (
     <>
       {licencia.map((item) => (
-        <div className="container" key={item.id}>
+        <div className="container" key={item._id}>
           <div className="row mb-4 mt-4">
             <div className="col-12 mb-4">
               <h1>Licencia: {item.title}</h1>
