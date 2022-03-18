@@ -16,9 +16,7 @@ const Inicio = () => {
       <div className="c3">
         <div className="type3">Aprendizaje</div>
       </div>
-
-
-      
+     
       <div className="rocket">
         <div className="rocket-body">
           <div className="body"></div>

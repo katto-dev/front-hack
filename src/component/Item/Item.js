@@ -2,7 +2,7 @@ import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Item.css";
 
-export const Item = ({ id, title, img, stock }) => {
+export const Item = ({ id, title, img }) => {
   return (
     <Card className="cardContainer bgn-primary">
       
