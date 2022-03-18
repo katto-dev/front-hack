@@ -41,8 +41,13 @@ const NavBar = () => {
               <Nav.Link as={Link} to="/estadisticas">
                 Estadisticas
               </Nav.Link>
-              <Nav.Link as={Link} to="/solicitudes" className="text-white">
-                <FontAwesomeIcon icon={faBell} />
+              <Nav.Link as={Link} to="/solicitudes">
+                <FontAwesomeIcon
+                  icon={faBell}
+                  size={"lg"}
+                  pull="right"
+                  color="White"
+                />
               </Nav.Link>
             </Nav>
             <Navbar.Text>
