@@ -21,7 +21,9 @@ export const Requests = () => {
   const fetchMyAPI = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch("../requests.json");
+      // const response = await fetch("../requests.json");
+      const response = await fetch("https://backend-hack.herokuapp.com/api/v1/applications/request");
+    
       const pedidos = await response.json();
       setData(pedidos);
     } catch (error) {
@@ -55,16 +57,16 @@ export const Requests = () => {
               <tr>
                 <th>Name</th>
                 <th>License</th>
-                <th>Time</th>
+                
                 <th>Approval</th>
               </tr>
             </thead>
             <tbody>
               {data.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.name}</td>
-                  <td>{item.license}</td>
-                  <td>{item.time} dias</td>
+                <tr key={item._id}>
+                  <td>{item.userId.mail}</td>
+                  <td>{item.vendorId.title}</td>
+                  
                   <td>
                     <div className="d-flex flex-wrap">
                       <Button className="mx-2" variant="outline-success">

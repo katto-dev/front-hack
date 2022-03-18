@@ -18,8 +18,7 @@ export const ItemListContainer = ({ greeting }) => {
       const response = await fetch("https://backend-hack.herokuapp.com/api/v1/vendors");
       const licencias = await response.json();
       if (categoryID) {
-        console.log("Licencias: ", licencias);
-        console.log(categoryID);
+        
         const filteredCategory = await licencias.filter(
           (x) => x.category === categoryID
         );

@@ -1,17 +1,47 @@
 import { Button, InputGroup, FormControl } from "react-bootstrap";
 import { TechContext } from "../../context/TechContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Formulario = () => {
   const { licencia } = useContext(TechContext);
-  const handleLic = () => {
-    Swal.fire(
-      "Exitoso!",
-      "Nos estaremos Comunicando a la brevedad...",
-      "success"
-    );
+
+  const [mail, setMail] = useState('')
+
+  const handleChange = (event) => {
+    setMail(event.target.value)
+  }
+
+  const handleLic = async () => {
+    try {
+      const params = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          vendorId: licencia.id,
+          mail: mail,
+        }),
+      };
+      const response = await fetch(
+        "https://backend-hack.herokuapp.com/api/v1/applications",
+        params
+      );
+      const data = await response.json();
+      if (response.status === 200) {
+        Swal.fire(
+          "Exitoso!",
+          "Nos estaremos Comunicando a la brevedad...",
+          "success"
+        );
+      } else {
+        Swal.fire("Error!", "No pudimos crear tu solicitud...", "error");
+      }
+    } catch (error) {
+      Swal.fire("Error!", "No pudimos crear tu solicitud...", "error");
+    }
   };
 
   return (
@@ -29,9 +59,8 @@ const Formulario = () => {
             <div className="row">
               <div className="offset-3 col-6">
                 <InputGroup className="mb-3">
-                  <InputGroup.Text>Nombre y Apellido:</InputGroup.Text>
-                  <FormControl aria-label="First name" />
-                  <FormControl aria-label="Last name" />
+                  <InputGroup.Text>Email:</InputGroup.Text>
+                  <FormControl aria-label="First name" onChange={handleChange}/>
                 </InputGroup>
               </div>
             </div>
