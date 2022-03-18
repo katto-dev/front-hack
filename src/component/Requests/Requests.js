@@ -5,18 +5,18 @@ import "./Requests.css";
 
 export const Requests = () => {
   const [data, setData] = useState([]);
-  const [add, setAdd] = useState(false);
-  const [reject, setReject] = useState(false);
+  // const [add, setAdd] = useState(false);
+  // const [reject, setReject] = useState(false);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const onAdd = () => {
-    setAdd(!add);
-  };
+  // const onAdd = () => {
+  //   setAdd(!add);
+  // };
 
-  const onDel = () => {
-    setReject(!reject);
-  };
+  // const onDel = () => {
+  //   setReject(!reject);
+  // };
 
   const fetchMyAPI = async () => {
     try {
@@ -36,7 +36,7 @@ export const Requests = () => {
   useEffect(() => {
     fetchMyAPI();
   }, []);
-
+console.log(data)
   return (
     <div className="container">
       <div className="solicitudes">
