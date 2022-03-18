@@ -36,12 +36,12 @@ export const Requests = () => {
   }, []);
 
   return (
-    <>
+    <div className="container">
       <div className="solicitudes">
         <h1>SOLICITUDES</h1>
       </div>
       {isLoading ? (
-        <div className="loader">
+        <div className="loader solicitudes-space-bottom">
           <Spinner animation="grow" variant="secondary" role="status"></Spinner>
           <h1>Cargando pedidos...</h1>
         </div>
@@ -84,6 +84,6 @@ export const Requests = () => {
       ) : (
         <p>No hay pedidos pendientes de aprobación</p>
       )}
-    </>
+    </div>
   );
 };

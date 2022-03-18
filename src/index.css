@@ -29,6 +29,17 @@ main {
   cursor: pointer;
 }
 
+/********** INICIO **********/
+
+
+/*Fondo de estrellas*/
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 
 /********** LOGIN **********/
 .auth__main {

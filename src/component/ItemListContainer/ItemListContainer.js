@@ -44,7 +44,7 @@ export const ItemListContainer = ({ greeting }) => {
         <h1>{greeting}</h1>
       </div>
       {isLoading ? (
-        <div className="loader">
+        <div className="loader licencias-space-bottom">
           <Spinner animation="grow" variant="secondary" role="status"></Spinner>
           <h1>Cargando proveedores...</h1>
         </div>
