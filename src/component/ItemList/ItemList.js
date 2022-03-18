@@ -8,7 +8,7 @@ export const ItemList = ({ products }) => {
           <Item
             key={product.id}
             id={product.id}
-            title={product.title}
+            title={product.name}
             img={product.img}
           />
         );
