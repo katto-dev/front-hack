@@ -58,8 +58,17 @@ Dirección de correo electrónico y contraseña (mecallapi):
 
 API de prueba: https://www.mecallapi.com/
 
+## Probar carga de solicitudes
+
+Mails validos
+- otro@gmail.com
+- nose@gmail.com
+
+
 ---
 ## Capturas
+
+<img alt="Workflow" width="400" src="https://raw.githubusercontent.com/rodosj89/front-hack/main/src/assets/img/flujo.png" />
 
 <img alt="Inicio" width="400" src="https://raw.githubusercontent.com/rodosj89/front-hack/main/src/assets/img/hackaton8_inicio.png" />
 <img alt="Licencias" width="400" src="https://raw.githubusercontent.com/rodosj89/front-hack/main/src/assets/img/licencias.png" />
