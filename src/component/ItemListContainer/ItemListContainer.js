@@ -36,7 +36,7 @@ export const ItemListContainer = ({ greeting }) => {
   useEffect(() => {
     fetchMyAPI();
   }, [categoryID]);
-  
+
   return (
     <>
       <div className="ItemListContainer">
@@ -50,7 +50,7 @@ export const ItemListContainer = ({ greeting }) => {
       ) : error ? (
         <p>Error: {error}</p>
       ) : data.length ? (
-        <div className="ItemListContainer">
+        <div className="ItemListContainer mx-5">
           <ItemList products={data} />
         </div>
       ) : (
