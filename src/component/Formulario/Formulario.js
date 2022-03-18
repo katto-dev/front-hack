@@ -1,6 +1,7 @@
 import { Button, InputGroup, FormControl } from "react-bootstrap";
 import { TechContext } from "../../context/TechContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Formulario = () => {
@@ -40,7 +41,9 @@ const Formulario = () => {
               <Button onClick={() => handleLic()}>Aceptar</Button>
             </div>
             <div className="col-12 col-md-6 pb-2">
-              <Button>Rechazar</Button>
+              <Button as={Link} to={"/licencias"}>
+                Cancelar
+              </Button>
             </div>
           </div>
         </div>
