@@ -12,6 +12,7 @@ import Login from "./component/Login/Login";
 import Formulario from "./component/Formulario/Formulario";
 import { Requests } from "./component/Requests/Requests";
 import Estadisticas from "./component/Estadisticas/Estadisticas";
+import Inicio from "./component/Inicio/Inicio";
 
 function App() {
   const token = localStorage.getItem("accessToken");
@@ -32,21 +33,11 @@ function App() {
           <Route path="/licencias/:id" element={<ItemDetailContainer />} />
           <Route path="/formulario" element={<Formulario />} />
           <Route path="/licencias" element={<ItemListContainer />} />
-          <Route
-            path="/licencias/:id"
-            element={
-              <ItemDetailContainer greeting={"Bienvenido a Licencias"} />
-            }
-          />
-          <Route
-            path="/category/:categoryID"
-            element={<ItemListContainer greeting={"Bienvenido a Licencias"} />}
-          />
-          <Route
-            path="/licencias"
-            element={<ItemListContainer greeting={"Bienvenido a Licencias"} />}
-          />
+          <Route path="/licencias/:id" element={<ItemDetailContainer greeting={"Bienvenido a Licencias"} />} />
+          <Route path="/category/:categoryID" element={<ItemListContainer greeting={"Bienvenido a Licencias"} />} />
+          <Route path="/licencias" element={<ItemListContainer greeting={"Bienvenido a Licencias"} />} />
           <Route path="/solicitudes" element={<Requests />} />
+          <Route path="/" element={<Inicio />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer />
