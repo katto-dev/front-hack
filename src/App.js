@@ -10,6 +10,7 @@ import Byc from "./component/Byc/Byc";
 import { ItemListContainer } from "./component/ItemListContainer/ItemListContainer";
 import NavBar from "./component/NavBar/NavBar";
 import ItemDetailContainer from "./component/ItemDetailContainer/ItemDetailContainer";
+import Formulario from "./component/Formulario/Formulario";
 import { Requests } from "./component/Requests/Requests";
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
           <Route path="/byc" element={<Byc />} />
           <Route path="/pdp" element={<Pdp />} />
           <Route path="/tyc" element={<Tyc />} />
+          <Route path="/licencias/:id" element={<ItemDetailContainer />} />
+          <Route path="/formulario" element={<Formulario />} />
+          <Route path="/licencias" element={<ItemListContainer />} />
           <Route path="/licencias/:id" element={<ItemDetailContainer greeting={"Bienvenido a Licencias"} />} />
           <Route path="/category/:categoryID" element={<ItemListContainer greeting={"Bienvenido a Licencias"} />} />
           <Route path="/licencias" element={<ItemListContainer greeting={"Bienvenido a Licencias"} />} />

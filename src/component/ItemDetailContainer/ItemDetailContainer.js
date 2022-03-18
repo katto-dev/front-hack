@@ -1,10 +1,16 @@
 import { useParams, Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Image, Button } from "react-bootstrap";
+import { TechContext } from "../../context/TechContext";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
+  const { addLicencia } = useContext(TechContext);
+
+  const onAdd = () => {
+    addLicencia(data);
+  };
 
   const fetchMyAPI = async () => {
     let response = await fetch("../providers.json");
@@ -15,12 +21,12 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     fetchMyAPI();
-  }, [id]);
+  }, []);
 
   return (
-    <div>
-      {data.map((item) => {
-        return (
+    <>
+      {data.map((item) => (
+        <>
           <div className="container" key={item.id}>
             <div className="row pt-5 pb-4">
               <div className="col-12 col-md-8">
@@ -47,7 +53,9 @@ const ItemDetailContainer = () => {
             </div>
             <div className="row pb-4">
               <div className="col-12 col-md-6 pb-2">
-                <Button>Solicitar</Button>
+                <Button onClick={onAdd} as={Link} to="/formulario">
+                  Solicitar
+                </Button>
               </div>
               <div className="col-12 col-md-6 pb-2">
                 <Button>Modificar</Button>
@@ -61,9 +69,9 @@ const ItemDetailContainer = () => {
               </div>
             </div>
           </div>
-        );
-      })}
-    </div>
+        </>
+      ))}
+    </>
   );
 };
 
