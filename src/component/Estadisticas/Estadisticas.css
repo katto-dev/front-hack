@@ -7,19 +7,24 @@
   } */
 
 #bar-example-24 {
-    height: 200px;
-    max-width: 300px;
+    height: 150px;
+    max-width: 250px;
     margin: 0 auto;
 }
 
 #column-example-18 {
-    height: 200px;
-    max-width: 200px;
+    height: 150px;
+    max-width: 150px;
     margin: 0 auto;
 }
 
 #area-example-10 {
-    height: 200px;
-    max-width: 250px;
+    height: 150px;
+    max-width: 200px;
     margin: 0 auto;
+}
+
+
+.estadisticas-space-bottom {
+    margin-bottom: 80px;
 }
