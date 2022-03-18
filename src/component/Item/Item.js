@@ -9,7 +9,6 @@ export const Item = ({ id, title, img, stock }) => {
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <span className="stock-card">Licencias Disponibles: {stock}</span>
         <Link to={`/licencias/${id}`}>
           <Button className="bton bton-primary">Ver detalle</Button>
         </Link>
