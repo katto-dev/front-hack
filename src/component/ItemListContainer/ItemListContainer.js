@@ -14,7 +14,8 @@ export const ItemListContainer = ({ greeting }) => {
   const fetchMyAPI = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch("../providers.json");
+      // const response = await fetch("../providers.json");
+      const response = await fetch("https://backend-hack.herokuapp.com/api/v1/vendors");
       const licencias = await response.json();
       if (categoryID) {
         console.log("Licencias: ", licencias);

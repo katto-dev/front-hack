@@ -1,0 +1,25 @@
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  } */
+
+#bar-example-24 {
+    height: 200px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#column-example-18 {
+    height: 200px;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+#area-example-10 {
+    height: 200px;
+    max-width: 250px;
+    margin: 0 auto;
+}
