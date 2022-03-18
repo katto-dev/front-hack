@@ -16,11 +16,11 @@ h1{
 div{
     transform-style: preserve-3d;
 }
-svg{
+/* svg{
     width: clamp(300px , 70% , 600px);
     height: 500px;
   
-}
+} */
 #rocket{
     
     transform: translateY(750px);
@@ -64,6 +64,14 @@ svg{
     }
 }
 a {
-    color:#F66947;
+    color:#00aee6;
     text-decoration: none;
+}
+
+.color-primary {
+    color: #00aee6;
+}
+
+.text-footer {
+    font-size: 20px;
 }

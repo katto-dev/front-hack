@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Spinner, Table, Button } from "react-bootstrap";
 
+import "./Requests.css";
+
 export const Requests = () => {
   const [data, setData] = useState([]);
   const [add, setAdd] = useState(false);
@@ -46,7 +48,7 @@ export const Requests = () => {
       ) : error ? (
         <p>Error: {error}</p>
       ) : data.length ? (
-        <div className="solicitudess">
+        <div className="solicitudess solicitudes-space-bottom ">
           {/* <RequestsList pedidos={data} /> */}
           <Table striped bordered hover variant="dark" responsive>
             <thead>
