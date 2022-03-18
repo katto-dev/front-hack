@@ -36,7 +36,7 @@ export const Requests = () => {
   }, []);
 
   return (
-    <>
+    <div className="container">
       <div className="solicitudes">
         <h1>SOLICITUDES</h1>
       </div>
@@ -84,6 +84,6 @@ export const Requests = () => {
       ) : (
         <p>No hay pedidos pendientes de aprobación</p>
       )}
-    </>
+    </div>
   );
 };
