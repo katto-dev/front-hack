@@ -10,6 +10,7 @@ export const ItemList = ({ products }) => {
             id={product.id}
             title={product.title}
             img={product.img}
+            stock={product.stock}
           />
         );
       })}
