@@ -2,7 +2,7 @@ import "./Estadisticas.css";
 
 const Estadisticas = () => {
   return (
-    <div className="container">
+    <div className="container estadisticas-space-bottom">
       <div className="row">
         <div className="col-12">
           <h1>Estadisticas</h1>
@@ -10,7 +10,7 @@ const Estadisticas = () => {
       </div>
       <div className="row">
         <div className="col-4 col-md-12 d-flex justify-content-around align-items-center mb-5">
-          <h4>Licencias en Uso:</h4>
+          <h5>Licencias en Uso:</h5>
           
             <table 
                 id="bar-example-24" 
@@ -43,7 +43,7 @@ const Estadisticas = () => {
       </div>
       <div className="row">
         <div className="col-4 col-md-12 d-flex justify-content-around align-items-center mb-5">
-          <h4>Licencias Libre:</h4>
+          <h5>Licencias Libre:</h5>
 
             <table 
                 id="column-example-18" 
@@ -77,7 +77,7 @@ const Estadisticas = () => {
       </div>
       <div className="row">
         <div className="col-4 col-md-12 d-flex justify-content-around align-items-center mb-5">
-          <h4>Lista de espera:</h4>
+          <h5>Lista de espera:</h5>
 
             <table 
                 id="area-example-10" 
