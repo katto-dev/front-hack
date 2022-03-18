@@ -9,8 +9,8 @@ const NavBar = () => {
         <Container>
           <Navbar.Brand as={Link} to="/">
             <img
-              src="../rocket.png"
-              width="30"
+              src="../hackaton-8.png"
+              width="170"
               height="30"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
