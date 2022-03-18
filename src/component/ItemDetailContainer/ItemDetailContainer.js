@@ -77,7 +77,6 @@ const ItemDetailContainer = () => {
                     <span>Licencias Disponibles: {item.stock}</span>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <div className="col-12 col-md-6 pb-2">
                   <Button
                     className="bton bton-primary"
@@ -86,33 +85,6 @@ const ItemDetailContainer = () => {
                   >
                     Volver
                   </Button>
-=======
-                <div className="row pb-4">
-                  <div className="col-12 col-md-6 pb-2">
-                    <Button
-                      className="bton bton-primary"
-                      onClick={onAdd}
-                      as={Link}
-                      to="/formulario"
-                    >
-                      Solicitar
-                    </Button>
-                  </div>
-                  <div className="col-12 col-md-6 pb-2">
-                    <Button className="bton bton-primary">Modificar</Button>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-12 pb-4">
-                    <Button
-                      className="bton bton-primary"
-                      as={Link}
-                      to="/licencias"
-                    >
-                      Volver
-                    </Button>
-                  </div>
->>>>>>> f7b618b4ad27a7d88abd9a29fbc56733fd166779
                 </div>
               </div>
             </div>
