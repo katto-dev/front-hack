@@ -41,7 +41,7 @@ export const Requests = () => {
         <h1>SOLICITUDES</h1>
       </div>
       {isLoading ? (
-        <div className="loader">
+        <div className="loader solicitudes-space-bottom">
           <Spinner animation="grow" variant="secondary" role="status"></Spinner>
           <h1>Cargando pedidos...</h1>
         </div>
