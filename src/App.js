@@ -9,20 +9,16 @@ import Byc from "./component/Byc/Byc";
 import { ItemListContainer } from "./component/ItemListContainer/ItemListContainer";
 import NavBar from "./component/NavBar/NavBar";
 import ItemDetailContainer from "./component/ItemDetailContainer/ItemDetailContainer";
-
 import Login from "./component/Login/Login";
-
 import Formulario from "./component/Formulario/Formulario";
 import { Requests } from "./component/Requests/Requests";
 
-
 function App() {
+  const token = localStorage.getItem("accessToken");
 
-  const token = localStorage.getItem('accessToken');
-
-    // if(!token) {
-    //     return <Login />
-    // }
+  // if(!token) {
+  //     return <Login />
+  // }
 
   return (
     <AdProvider>
@@ -35,9 +31,20 @@ function App() {
           <Route path="/licencias/:id" element={<ItemDetailContainer />} />
           <Route path="/formulario" element={<Formulario />} />
           <Route path="/licencias" element={<ItemListContainer />} />
-          <Route path="/licencias/:id" element={<ItemDetailContainer greeting={"Bienvenido a Licencias"} />} />
-          <Route path="/category/:categoryID" element={<ItemListContainer greeting={"Bienvenido a Licencias"} />} />
-          <Route path="/licencias" element={<ItemListContainer greeting={"Bienvenido a Licencias"} />} />
+          <Route
+            path="/licencias/:id"
+            element={
+              <ItemDetailContainer greeting={"Bienvenido a Licencias"} />
+            }
+          />
+          <Route
+            path="/category/:categoryID"
+            element={<ItemListContainer greeting={"Bienvenido a Licencias"} />}
+          />
+          <Route
+            path="/licencias"
+            element={<ItemListContainer greeting={"Bienvenido a Licencias"} />}
+          />
           <Route path="/solicitudes" element={<Requests />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
