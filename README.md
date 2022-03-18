@@ -61,7 +61,7 @@ API de prueba: https://www.mecallapi.com/
 ---
 ## Capturas
 
-![Inicio](https://ibb.co/2WYNGZb)
-![Licencias](https://ibb.co/vJ1ZtD9)
-![Solicitudes](https://ibb.co/J530Gk5)
-![404](https://ibb.co/D410PSN)
+<img alt="Inicio" width="400" src="https://ibb.co/2WYNGZb" />
+<img alt="Licencias" width="400" src="https://ibb.co/vJ1ZtD9" />
+<img alt="Solicitudes" width="400" src="https://ibb.co/J530Gk5" />
+<img alt="Error 404" width="400" src="https://ibb.co/D410PSN" />
