@@ -78,13 +78,31 @@ const ItemDetailContainer = () => {
                   </div>
                 </div>
                 <div className="col-12 col-md-6 pb-2">
-                  <Button
-                    className="bton bton-primary"
-                    as={Link}
-                    to="/licencias"
-                  >
-                    Volver
-                  </Button>
+                  <div className="row pb-4">
+                    <div className="col-12 col-md-6 pb-2">
+                      <Button
+                        className="bton bton-primary"
+                        onClick={onAdd}
+                        as={Link}
+                        to="/formulario"
+                      >
+                        Solicitar
+                      </Button>
+                      
+                    </div>
+                    <div className="col-12 pb-4">
+                      <Button
+                        className="bton bton-primary"
+                        as={Link}
+                        to="/licencias"
+                      >
+                        Volver
+                      </Button>
+                    </div>
+                  </div>
+                  
+                  
+                  
                 </div>
               </div>
             </div>
