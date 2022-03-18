@@ -61,7 +61,7 @@ API de prueba: https://www.mecallapi.com/
 ---
 ## Capturas
 
-<img alt="Inicio" width="400" src="https://ibb.co/2WYNGZb" />
-<img alt="Licencias" width="400" src="https://ibb.co/vJ1ZtD9" />
-<img alt="Solicitudes" width="400" src="https://ibb.co/J530Gk5" />
-<img alt="Error 404" width="400" src="https://ibb.co/D410PSN" />
+<img alt="Inicio" width="400" src="https://raw.githubusercontent.com/rodosj89/front-hack/main/src/assets/img/hackaton8_inicio.png" />
+<img alt="Licencias" width="400" src="https://raw.githubusercontent.com/rodosj89/front-hack/main/src/assets/img/licencias.png" />
+<img alt="Solicitudes" width="400" src="https://raw.githubusercontent.com/rodosj89/front-hack/main/src/assets/img/solicitudes.png" />
+<img alt="Error 404" width="400" src="https://raw.githubusercontent.com/rodosj89/front-hack/main/src/assets/img/404.png" />
