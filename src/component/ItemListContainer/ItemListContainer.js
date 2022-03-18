@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
-// import { collection, getDocs, query, where } from "firebase/firestore";
-// import { db } from "../../firebase/firebase";
 
 export const ItemListContainer = ({ greeting }) => {
   const [data, setData] = useState([]);
@@ -13,30 +11,31 @@ export const ItemListContainer = ({ greeting }) => {
 
   const { categoryID } = useParams();
 
-  const getData = async () => {
-    await fetch(
-      "providers.json",
-
-      {
-        headers: {
-          "Content-Type": "application/json",
-
-          Accept: "application/json",
-        },
+  const fetchMyAPI = async () => {
+    try {
+      setIsLoading(true);
+      const response = await fetch("../providers.json");
+      const licencias = await response.json();
+      if (categoryID) {
+        console.log("Licencias: ", licencias);
+        console.log(categoryID);
+        const filteredCategory = await licencias.filter(
+          (x) => x.category === categoryID
+        );
+        setData(filteredCategory);
+      } else {
+        setData(licencias);
       }
-    )
-      .then(function (response) {
-        return response.json();
-      })
-
-      .then(function (myJson) {
-        setData(myJson);
-      });
+    } catch (error) {
+      setError(error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {
-    getData();
-  }, []);
+    fetchMyAPI();
+  }, [categoryID]);
 
   return (
     <>
@@ -46,23 +45,17 @@ export const ItemListContainer = ({ greeting }) => {
       {isLoading ? (
         <div className="loader">
           <Spinner animation="grow" variant="secondary" role="status"></Spinner>
-          <h1>Cargando productos...</h1>
+          <h1>Cargando proveedores...</h1>
         </div>
       ) : error ? (
         <p>Error: {error}</p>
       ) : data.length ? (
-        <div className="ItemListContainer">
+        <div className="ItemListContainer mx-5">
           <ItemList products={data} />
         </div>
       ) : (
-        <p>No hay productos</p>
+        <p>No se encontraron proveedores</p>
       )}
     </>
   );
-
-  // return (
-  //   <div className="App">
-  //     {data && data.length > 0 && data.map((item) => <p>{item.img}</p>)}
-  //   </div>
-  // );
 };
