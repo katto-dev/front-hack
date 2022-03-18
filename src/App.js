@@ -12,6 +12,7 @@ import ItemDetailContainer from "./component/ItemDetailContainer/ItemDetailConta
 import Login from "./component/Login/Login";
 import Formulario from "./component/Formulario/Formulario";
 import { Requests } from "./component/Requests/Requests";
+import Estadisticas from "./component/Estadisticas/Estadisticas";
 
 function App() {
   const token = localStorage.getItem("accessToken");
@@ -28,6 +29,7 @@ function App() {
           <Route path="/byc" element={<Byc />} />
           <Route path="/pdp" element={<Pdp />} />
           <Route path="/tyc" element={<Tyc />} />
+          <Route path="/estadisticas" element={<Estadisticas />} />
           <Route path="/licencias/:id" element={<ItemDetailContainer />} />
           <Route path="/formulario" element={<Formulario />} />
           <Route path="/licencias" element={<ItemListContainer />} />
