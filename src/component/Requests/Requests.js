@@ -21,9 +21,9 @@ export const Requests = () => {
   const fetchMyAPI = async () => {
     try {
       setIsLoading(true);
-      // const response = await fetch("../requests.json");
-      const response = await fetch("https://backend-hack.herokuapp.com/api/v1/applications/request");
-    
+      const response = await fetch(
+        "https://backend-hack.herokuapp.com/api/v1/applications/request"
+      );
       const pedidos = await response.json();
       setData(pedidos);
     } catch (error) {
