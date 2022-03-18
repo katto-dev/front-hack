@@ -18,5 +18,12 @@ npm i --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons
 ## FontAwesomeIcon
 
 Docs
-
 https://fontawesome.com/v5/docs/web/use-with/react
+
+## Pruebar el Login
+
+Dirección de correo electrónico y contraseña (mecallapi):
+- walter.beau@mecallapi.com
+- gayla.bertrand@mecallapi.com
+
+API de prueba: https://www.mecallapi.com/

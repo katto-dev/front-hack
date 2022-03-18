@@ -3,6 +3,15 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const NavBar = () => {
+
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("user");
+    window.location.href = "/";
+  };
+
   return (
     <div className="col-12">
       <Navbar variant="dark" expand="lg">
@@ -32,6 +41,14 @@ const NavBar = () => {
                 Estadisticas
               </Nav.Link>
             </Nav>
+            <Navbar.Text>
+              <button 
+                  className='btn btn-outline-info'
+                  onClick={handleLogout}
+              >
+                  Logout
+              </button>
+            </Navbar.Text>
           </Navbar.Collapse>
         </Container>
       </Navbar>

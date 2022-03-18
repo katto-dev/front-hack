@@ -95,8 +95,8 @@ const Error404 = () => {
     </div>
     <div className="text">
         <h1>Error 404</h1>  
-      <h2>No pudimos despegar :(</h2>
-         <h3>Pagina no encontrada</h3> 
+      <h4>No pudimos despegar :(</h4>
+         <h5>Pagina no encontrada</h5> 
     </div>
     </>
   );

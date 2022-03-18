@@ -1,4 +1,3 @@
-// import logoHackaton from "./assets/img/hackaton_8.png";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./component/Footer/Footer";
@@ -10,8 +9,16 @@ import Byc from "./component/Byc/Byc";
 import { ItemListContainer } from "./component/ItemListContainer/ItemListContainer";
 import NavBar from "./component/NavBar/NavBar";
 import ItemDetailContainer from "./component/ItemDetailContainer/ItemDetailContainer";
+import Login from "./component/Login/Login";
 
 function App() {
+
+  const token = localStorage.getItem('accessToken');
+
+    // if(!token) {
+    //     return <Login />
+    // }
+
   return (
     <AdProvider>
       <Router>
