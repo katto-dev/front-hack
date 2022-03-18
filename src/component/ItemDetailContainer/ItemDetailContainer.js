@@ -4,6 +4,8 @@ import { useState, useEffect, useContext } from "react";
 import { Image, Button } from "react-bootstrap";
 import { TechContext } from "../../context/TechContext";
 
+import "./ItemDetailContainer.css";
+
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
@@ -28,7 +30,7 @@ const ItemDetailContainer = () => {
     <>
       {data.map((item) => (
         <>
-          <div className="container" key={item.id}>
+          <div className="container proveedor-space-bottom" key={item.id}>
             <div className="row pt-5 pb-4">
               <div className="col-12 col-md-8">
                 <h1 className="text-aligcenter">{item.title}</h1>
@@ -54,17 +56,17 @@ const ItemDetailContainer = () => {
             </div>
             <div className="row pb-4">
               <div className="col-12 col-md-6 pb-2">
-                <Button onClick={onAdd} as={Link} to="/formulario">
+                <Button className="bton bton-primary" onClick={onAdd} as={Link} to="/formulario">
                   Solicitar
                 </Button>
               </div>
               <div className="col-12 col-md-6 pb-2">
-                <Button>Modificar</Button>
+                <Button className="bton bton-primary">Modificar</Button>
               </div>
             </div>
             <div className="row">
               <div className="col-12 pb-4">
-                <Button as={Link} to="/licencias">
+                <Button className="bton bton-primary" as={Link} to="/licencias">
                   Volver
                 </Button>
               </div>

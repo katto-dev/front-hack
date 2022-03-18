@@ -39,6 +39,7 @@ export const ItemListContainer = ({ greeting }) => {
 
   return (
     <>
+      <h1>LICENCIAS</h1>
       <div className="ItemListContainer">
         <h1>{greeting}</h1>
       </div>
@@ -50,7 +51,7 @@ export const ItemListContainer = ({ greeting }) => {
       ) : error ? (
         <p>Error: {error}</p>
       ) : data.length ? (
-        <div className="ItemListContainer mx-5">
+        <div className="ItemListContainer mx-5 licencias-space-bottom">
           <ItemList products={data} />
         </div>
       ) : (

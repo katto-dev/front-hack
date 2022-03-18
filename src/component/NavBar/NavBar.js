@@ -14,14 +14,13 @@ const NavBar = () => {
   };
 
   return (
-    <div className="col-12">
+    <div className="col-12 bgn-primary">
       <Navbar variant="dark" expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="/">
             <img
               src="../hackaton-8.png"
-              width="170"
-              height="30"
+              
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />

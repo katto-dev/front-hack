@@ -4,7 +4,7 @@ const Error404 = () => {
   return (
     <>
     <div>
-        <svg width="1123" height="837" viewBox="0 0 1123 837" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="1123" height="575" viewBox="0 0 1123 837" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="1123" height="837" fill="black"/>
             <g id="sky" filter="url(#filter0_d)">
             <rect id="background" x="30" y="26" width="1063" height="777" rx="20" fill="black"/>
